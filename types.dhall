@@ -1,6 +1,6 @@
 { Job =
     ./types/Job.dhall
-      sha256:188b0ff021b3655e231fd815ec318f7c4bbb09c80e21476279500de49ab41945
+      sha256:3c2dcde4757d50d1e834c41af37386249f22a201bc5686ea17d583be3cc05ffa
 , JobEnv =
     ./types/JobEnv.dhall
       sha256:521e86d74ae30cec88804eb9fa8014510297c9cf6b4b412d1576df31ed72dc6f
@@ -27,7 +27,7 @@
       sha256:c957b80c6a0d53dce7bf05921c1983797b5d52958ded76244cd94ae80deb94e5
 , Workflow =
     ./types/Workflow.dhall
-      sha256:8b9199905c1a9a900e2678c36018d93815c2339db5c5f65d54e9873f468c48f9
+      sha256:114395b463465e1a1186d7db6fd4b15670183e4b7084105d1633abbf62ce5881
 , Push =
     ./types/events/Push.dhall
       sha256:5147b1dd6eca94aae5d217b979cac20ba64b7ec160488dd917f171cae451b135
@@ -49,9 +49,15 @@
 , Concurrency =
     ./types/Concurrency.dhall
       sha256:76a98598b0b13d496c062d301b27c82059be340aae993285c6b345ec494a4913
+, ContainerPort =
+    ./types/ContainerPort.dhall
+      sha256:0d81b50cc6c247330ec72aaa9f26d1aa903366bc95324a09d93ca1b836b3f9c5
+, ContainerVolume =
+    ./types/ContainerVolume.dhall
+      sha256:e73a2ec07449acffe1a4ba9cd261b845a8beb8f81fbc1415575639e99da668e6
 , Container =
     ./types/Container.dhall
-      sha256:6d48c2461a004fb32d7b04f8716621a6f556fccb4ae66b4df20ff4de9b753e09
+      sha256:5a34665083d530f74f272ccd1de39e5be731d0b14ea4114dcccb35e56eadc37d
 , Permission =
     ./types/Permission.dhall
       sha256:b2a2f093af7412e34040a806e226ee4e7d691bd18df5c46bbfcc7cd222a37a2d

@@ -1,1 +1,4 @@
-{ Type = ../types/RunsOn.dhall }
+{ Type =
+    ../types/RunsOn.dhall
+      sha256:17864110f3cc91183c178f8218967c500f3493391e5327740dd1f19c74eb6ee2
+}

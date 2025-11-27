@@ -10,15 +10,18 @@ let Optional/map =
       https://prelude.dhall-lang.org/v17.1.0/Optional/map.dhall
         sha256:501534192d988218d43261c299cc1d1e0b13d25df388937add784778ab0054fa
 
-let Step = ../../schemas/Step.dhall
+let Step =
+      ../../schemas/Step.dhall
+        sha256:7e0c2877e2ee3d57de46c1bf631d36f3d0ff636f73514233dbed3f100d2530ce
 
-let Checkout = ../../schemas/actions/Checkout.dhall
+let Checkout =
+      ../../schemas/actions/Checkout.dhall
+        sha256:d9c339bf138755db638c58f18d91dcd40a49f5905064af111b1b56d8eec57c5a
 
 let stringBool =
       Optional/map Bool Text (λ(b : Bool) → if b then "true" else "false")
 
-let stringNatural =
-      Optional/map Natural Text (λ(n : Natural) → Natural/show n)
+let stringNatural = Optional/map Natural Text (λ(n : Natural) → Natural/show n)
 
 let checkout
     : Checkout.Type → Step.Type
@@ -49,7 +52,8 @@ let checkout
                     , clean = stringBool args.clean
                     , filter = args.filter
                     , sparse-checkout = args.sparse-checkout
-                    , sparse-checkout-cone-mode = stringBool args.sparse-checkout-cone-mode
+                    , sparse-checkout-cone-mode =
+                        stringBool args.sparse-checkout-cone-mode
                     , fetch-depth = stringNatural args.fetch-depth
                     , fetch-tags = stringBool args.fetch-tags
                     , show-progress = stringBool args.show-progress
@@ -60,6 +64,6 @@ let checkout
                     }
                 )
             )
-      }
+        }
 
 in  checkout

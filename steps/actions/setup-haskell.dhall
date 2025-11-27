@@ -10,9 +10,13 @@ let Optional/map =
       https://prelude.dhall-lang.org/v17.1.0/Optional/map.dhall
         sha256:501534192d988218d43261c299cc1d1e0b13d25df388937add784778ab0054fa
 
-let Step = ../../schemas/Step.dhall
+let Step =
+      ../../schemas/Step.dhall
+        sha256:7e0c2877e2ee3d57de46c1bf631d36f3d0ff636f73514233dbed3f100d2530ce
 
-let HaskellSetup = ../../schemas/actions/HaskellSetup.dhall
+let HaskellSetup =
+      ../../schemas/actions/HaskellSetup.dhall
+        sha256:e6dbbacedf33965f5005dc2a22164d0a5edb3e09b2b4842104cec011c6d3c95d
 
 let stringBool =
       Optional/map Bool Text (λ(b : Bool) → if b then "true" else "false")
